@@ -44,13 +44,6 @@ total_words = len(vocab)
 word2index = preprocess_data.pre_processor.get_word_2_index(vocab)
 
 # initialize tensors and model parameters
-loss = nn.CrossEntropyLoss()
-input = Variable(torch.randn(2, 5), requires_grad=True)
-print('Input tensor: ',input)
-target = Variable(torch.LongTensor(2).random_(5))
-print('Target tensor: ', target)
-output = loss(input, target)
-output.backward()
 hidden_size = 100
 input_size = total_words
 if args.all_categories:
